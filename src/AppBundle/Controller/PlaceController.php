@@ -26,7 +26,7 @@ class PlaceController extends FOSRestController
 		
         $places = $this->get('doctrine.orm.entity_manager')
                 ->getRepository('AppBundle:Users')
-                ->findAll();
+                ->find();
 					
 			
         /* @var $places Place[] */
