@@ -42,7 +42,7 @@ class PlaceController extends FOSRestController
     {
         $place = $this->get('doctrine.orm.entity_manager')
                 ->getRepository('AppBundle:Users')
-                ->find($request->get('id')); // L'identifiant en tant que paramétre n'est plus nécessaire
+                ->findAll($request->get('id')); // L'identifiant en tant que paramétre n'est plus nécessaire
         /* @var $place Place */
 
         if (empty($place)) {
